@@ -1,5 +1,5 @@
 complete <- function (directory, id = 1:332){
-  setwd(directory) 
+  #setwd(directory) 
   results <- matrix (ncol =2, nrow=0 )
   colnames(results) <- c ("id","nobs") 
   for (fileId in id)
@@ -17,6 +17,6 @@ complete <- function (directory, id = 1:332){
     results <- rbind(results,newRow)
   
   }
-  results
+  as.data.frame (results)
   
 }
